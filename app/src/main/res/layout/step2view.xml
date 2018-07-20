@@ -5,6 +5,7 @@
             <CheckBox android:id="@+id/step2_cardcheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:button="@drawable/btn_chkbox" android:text="@string/text_cardinfo" style="$style/text17sp_center"/>
             <TextView android:id="@+id/step2_etc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/text_step2etc" android:layout_below="@+id/step2_cardcheck" style="$style/text14sp_left"/>
         </RelativeLayout>
+        <!-- 체크 버튼 누르면 나오는 화면 -->
         <RelativeLayout android:id="@+id/step2_cardinfolayout" android:background="@drawable/bg_stepcontent" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/step2_infolayout">
             <ImageView android:id="@+id/step2_typeicon" android:layout_width="wrap_content" android:layout_height="45dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/icon_round" style="@style/img_basic"/>
             <TextView android:id="@+id/step2_type" android:layout_width="90dp" android:layout_height="45dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:text="@string/text_cardtype" android:layout_toRightOf="@+id/step2_typeicon" style="@style/text17sp_left"/>
@@ -33,6 +34,7 @@
             <TextView android:id="@+id/step2_email" android:layout_width="90dp" android:layout_height="45dp" android:layout_marginRight="5dp" android:text="@string/text_email" android:maxLength="50" android:layout_toRightOf="@+id/step2_emailicon" android:layout_below="@+id/step2_name" style="@style/text17sp_left"/>
             <EditText android:id="@+id/step2_emailedit" android:background="@drawable/bg_edit" android:layout_width="match_parent" android:layout_height="45dp" android:layout_toRightOf="@+id/step2_email" android:layout_below="@+id/step2_period" android:layout_alignTop="@+id/step2_email" android:layout_alignBottom="@+id/step2_email" android:inputType="textEmailAddress" style="@style/text17sp_left"/>
         </RelativeLayout>
+
         <LinearLayout android:orientation="horizontal" android:id="@+id/step2_btnlayout" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/step2_cardinfolayout">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"/>
             <Button android:id="@+id/step2_prvebtn" android:text="@string/btn_prev_text" android:layout_weight="8" style="@style/step_prev_button"/>

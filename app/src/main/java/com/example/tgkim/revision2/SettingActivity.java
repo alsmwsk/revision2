@@ -77,7 +77,7 @@ public class SettingActivity extends AppCompatActivity {
 
         viewpager = findViewById(R.id.steppager);
         viewpager.setAdapter(new MyPageAdapter(getSupportFragmentManager()));
-        step1Init();
+        //step1Init();
         step2Init();
         step3Init();
 //        this.step1_nextBtn = (Button)this.step1_layout.findViewById(R.id.step1_nextbtn);
@@ -118,34 +118,34 @@ public class SettingActivity extends AppCompatActivity {
         this.viewpager.setCurrentItem(viewpager.getCurrentItem() - 1);
     }
 
-    private void step1Init(){
-        //int i = 0;
-        this.regionArray = new String[getResources().getStringArray(R.array.enterprise).length];
-        regionArray = getResources().getStringArray(R.array.enterprise);
-
-        this.step1ReginSpinner = this.step1_layout.findViewById(R.id.step1_regionspinner);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String >(this, R.layout.customerspinner, this.regionArray);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // 스피너 스타일
-        this.step1ReginSpinner.setPrompt(getResources().getString(R.string.text_region)); // 스피너 제목
-        this.step1ReginSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                int idx = position;
-                SettingActivity.this.step1RegionId = SettingActivity.this.regionIndex[idx];
-                SettingActivity.this.step1RegionNm = SettingActivity.this.regionArray[idx];
-
-                if (SettingActivity.this.step1Map.containsKey(SettingActivity.this.regionIndex[idx])){
-
-//                    String[] param = (String)
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-    }
+//    private void step1Init(){
+//        //int i = 0;
+//        this.regionArray = new String[getResources().getStringArray(R.array.enterprise).length];
+//        regionArray = getResources().getStringArray(R.array.enterprise);
+//
+//        this.step1ReginSpinner = this.step1_layout.findViewById(R.id.step1_regionspinner);
+//        ArrayAdapter<String> adapter1 = new ArrayAdapter<String >(this, R.layout.customerspinner, this.regionArray);
+//        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // 스피너 스타일
+//        this.step1ReginSpinner.setPrompt(getResources().getString(R.string.text_region)); // 스피너 제목
+//        this.step1ReginSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                int idx = position;
+//                SettingActivity.this.step1RegionId = SettingActivity.this.regionIndex[idx];
+//                SettingActivity.this.step1RegionNm = SettingActivity.this.regionArray[idx];
+//
+//                if (SettingActivity.this.step1Map.containsKey(SettingActivity.this.regionIndex[idx])){
+//
+////                    String[] param = (String)
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
+//    }
 
     private void step2Init(){
 
